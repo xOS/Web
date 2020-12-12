@@ -4,7 +4,7 @@
       <el-col>
         <el-card>
           <div slot="header">
-            订阅转换
+            节点定制
             <svg-icon icon-class="github" style="margin-left: 20px" @click="goToProject" />
 
             <div style="display: inline-block; position:absolute; right: 20px">{{ backendVersion }}</div>
@@ -381,7 +381,7 @@ export default {
     };
   },
   created() {
-    document.title = "订阅转换";
+    document.title = "节点定制";
     this.isPC = this.$getOS().isPc;
 
     // 获取 url cache
