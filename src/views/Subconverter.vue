@@ -348,7 +348,7 @@ export default {
         filename: "",
         emoji: true,
         nodeList: true,
-        extraset: true,
+        extraset: false,
         sort: true,
         udp: true,
         tfo: true,
