@@ -7,7 +7,7 @@
             节点定制
             <svg-icon icon-class="github" style="margin-left: 20px" @click="goToProject" />
             <svg-icon icon-class="telegram" style="margin-left: 20px" @click="gotoTgChannel" />
-            <div style="display: inline-block; position:absolute; right: 20px">{{ backendVersion }}</div>
+            <div style="display: inline-block; position:absolute; right: 20px">后端版本{{ backendVersion }}</div>
           </div>
           <el-container>
             <el-form :model="form" label-width="80px" label-position="left" style="width: 100%">
@@ -232,7 +232,7 @@ const tgBotLink = process.env.VUE_APP_BOT_LINK
 export default {
   data() {
     return {
-      backendVersion: "",
+      backendVersion: "未知",
       advanced: "2",
 
       // 是否为 PC 端
@@ -622,7 +622,7 @@ export default {
         )
         .then(res => {
           this.backendVersion = res.data.replace(/backend\n$/gm, "");
-          this.backendVersion = this.backendVersion.replace("subconverter", "");
+          this.backendVersion = this.backendVersion.replace("subconverter v", " ");
         });
     },
     saveSubUrl() {
