@@ -381,7 +381,7 @@ export default {
     };
   },
   created() {
-    document.title = "Subscription Converter";
+    document.title = "订阅转换";
     this.isPC = this.$getOS().isPc;
 
     // 获取 url cache
