@@ -32,9 +32,9 @@ jobs:
       with:
         name: dist
         path: dist/
-    - name: Push update to api
+    - name: Push update to API
       uses: zzzze/webhook-trigger@master
       with:
         data: '{"ref":"master"}'
-        webhook_url: 'https://api.github.com/repos/XOS/api/actions/workflows/sub-web.yml/dispatches'
+        webhook_url: 'https://api.github.com/repos/XOS/API/actions/workflows/sub-web.yml/dispatches'
         options: '-H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.REPO_TOKEN }}"'
