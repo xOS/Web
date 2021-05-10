@@ -276,6 +276,11 @@ export default {
             label: "customized",
             options: [
               {
+                label: "楠格",
+                value:
+                  "https://hub.nan.ge/MyConfig.ini"
+              },
+              {
                 label: "Maying",
                 value:
                   "https://cdn.jsdelivr.net/gh/SleepyHeeead/subconverter-config@master/remote-config/customized/maying.ini"
