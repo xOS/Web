@@ -278,7 +278,7 @@ export default {
               {
                 label: "楠格",
                 value:
-                  "https://hub.nange.cn/MyConfig.ini"
+                  "https://hub.nan.ge/MyConfig.ini"
               }
                ]
              },
@@ -354,7 +354,7 @@ export default {
   },
   mounted() {
     this.form.clientType = "clash";
-    this.notify();
+    //this.notify();
     this.getBackendVersion();
   },
   methods: {
