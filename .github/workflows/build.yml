@@ -45,6 +45,7 @@ jobs:
         git fetch
         git checkout --orphan release
         git rm -rf .
+        git add dist/*
         git commit -am "Updated at $(date)"
         git branch -D release
         git branch -m release
