@@ -9,6 +9,7 @@ require(`@/plugins/axios`)
 require(`@/plugins/device`)
 
 import '@/icons' // icon
+import '@/image'
 import './registerServiceWorker'
 
 Vue.config.productionTip = false
