@@ -1,6 +1,6 @@
 {
-	"name": "web",
-	"short_name": "web",
+	"name": "节点定制",
+	"short_name": "节点定制",
 	"theme_color": "#002140",
 	"icons": [{
 		"src": "./image/android-chrome-192x192.png",

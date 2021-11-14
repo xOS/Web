@@ -32,7 +32,7 @@ jobs:
       with:
         name: dist
         path: dist/
-    - name: Push update to API
+    - name: Push Update to API
       uses: zzzze/webhook-trigger@master
       with:
         data: '{"ref":"master"}'
