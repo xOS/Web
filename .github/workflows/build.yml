@@ -25,13 +25,15 @@ jobs:
 
     - name: Get dependencies and build
       run: |
-        yarn install
-        yarn build
+        #yarn install
+        #yarn build
+        npm i
+        npm run build
     - name: Upload
       uses: actions/upload-artifact@v1
       with:
-        name: dist
-        path: dist/
+        name: build
+        path: build/
     - name: Push Update to API
       uses: zzzze/webhook-trigger@master
       with:
