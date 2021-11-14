@@ -38,21 +38,9 @@ jobs:
         data: '{"ref":"master"}'
         webhook_url: 'https://api.github.com/repos/xOS/API/actions/workflows/Web.yml/dispatches'
         options: '-H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.REPO_TOKEN }}"'
-    - name: Push artifacts to release branch
-      run: |
-        git config --local user.email "admin@nange.cn"
-        git config --local user.name "翠花"
-        git fetch
-        git checkout --orphan release
-        git rm -rf .
-        git add dist/*
-        git commit -am "Updated at $(date)"
-        git branch -D release
-        git branch -m release
-            
-    - name: GitHub Push
-      uses: ad-m/github-push-action@v0.6.0
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: release
-        force: true
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
