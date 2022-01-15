@@ -32,11 +32,11 @@ jobs:
       with:
         name: dist
         path: dist/
-    - name: Push Update to API
+    - name: Push Update to Api
       uses: zzzze/webhook-trigger@master
       with:
         data: '{"ref":"master"}'
-        webhook_url: 'https://api.github.com/repos/xOS/API/actions/workflows/Web.yml/dispatches'
+        webhook_url: 'https://api.github.com/repos/xOS/Api/actions/workflows/Web.yml/dispatches'
         options: '-H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.REPO_TOKEN }}"'
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
