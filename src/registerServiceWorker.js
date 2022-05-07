@@ -30,3 +30,10 @@ if (process.env.NODE_ENV === 'production') {
     }
   })
 }
+export function unregister() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(registration => {
+      registration.unregister();
+    });
+  }
+}
