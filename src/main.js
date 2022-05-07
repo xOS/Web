@@ -17,4 +17,4 @@ new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
-serviceWorker.unregister();
+registerServiceWorker.unregister();

@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 export function unregister() {
-  if ('serviceWorker' in navigator) {
+  if ('registerServiceWorker' in navigator) {
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister();
     });
